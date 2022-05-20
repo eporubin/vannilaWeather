@@ -54,13 +54,14 @@ function displayTemperature(response) {
 	let humidity = response.data.main.humidity;
 	let windSpeed = response.data.wind.speed;
 	let iconWheatherElement = document.getElementById("icon-weather");
+	let weatherDescription = document.getElementById("weather-description");
 	
 	celciusTemperature = response.data.main.temp.toFixed(1);
 	temperatureElement.innerHTML = `${celciusTemperature}`;
 	document.getElementById("location").innerHTML = nameCity;
 	document.getElementById("humidity").innerHTML = `${humidity} %`;
 	document.getElementById("wind-speed").innerHTML = `${windSpeed} km/h`;
-	document.getElementById("weather-description").innerHTML = response.data.weather[0].main;
+	weatherDescription.innerHTML = response.data.weather[0].main;
 
 	//Icon selection 
 	
