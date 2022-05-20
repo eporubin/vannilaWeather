@@ -1,0 +1,515 @@
+a {
+	text-decoration: none !important;
+	color: #00204a !important;
+}
+.btn-search {
+	color: #fff !important;
+	background-color: #2a78b0 !important;
+	border-color: #2a78b0 !important;
+	font-family: "Ubuntu", sans-serif;
+	border-radius: 0.25em !important;
+	transition: all 50ms ease-in-out;
+	width: 100%;
+	margin: 1rem 0rem;
+}
+.btn-search:hover {
+	color: #2a78b0 !important;
+	background-color: #ffffff !important;
+	border-color: #ffeb3b !important;
+}
+.btn-icon {
+	color: #fff !important;
+	background-color: #ffeb3b !important;
+	border-color: #2a78b0;
+	font-family: "Ubuntu", sans-serif;
+	border-radius: 0.25em !important;
+	transition: all 50ms ease-in-out;
+	width: 100%;
+	margin-top: 1rem;
+}
+.btn-icon:hover {
+	background-color: #ffffff !important;
+	border-color: #ffeb3b !important;
+}
+.form-control {
+	border-radius: 0.25em !important;
+	margin-top: 1rem;
+}
+.weather-container {
+	border: #ffeb3b;
+	display: block;
+	margin: 0 auto;
+	margin-top: 5%;
+	width: 80%;
+	background: radial-gradient(
+		905px at 4.9% 85.8%,
+		rgb(191, 223, 244) 0.1%,
+		rgb(172, 192, 247) 57.6%
+	);
+}
+.source-link {
+	border: #fdb44b 1px solid;
+	display: block;
+	margin: 0 auto;
+	width: 80%;
+}
+.current-icon {
+	display: block;
+	margin: 0 auto;
+}
+.big-icon {
+	padding: 15px 15px;
+	align-content: flex-end;
+}
+.temperature {
+	color: #005792;
+	margin-left: 10px;
+	font-weight: 400;
+	font-size: 60px;
+	line-height: 1;
+}
+.unit {
+	color: #00204a;
+	font-size: 15px;
+	line-height: 26px;
+	font-weight: 500;
+	position: relative;
+	line-height: 1;
+	top: -40px;
+}
+.active {
+	cursor: default;
+	color: #005792 !important;
+}
+.active :hover {
+	text-decoration: none !important;
+
+}
+.description {
+	color: #005792;
+	font-size: 20px;
+	line-height: 30px;
+	font-weight: 400;
+	position: relative;
+	line-height: 1;
+	left: -40px;
+}
+.temperature-container {
+	margin-top: 10px;
+	margin-left: 25px;
+}
+.location-label {
+	color: #ffeb3b;
+	font-family: "Ubuntu", sans-serif;
+	margin-left: 25px;
+	font-weight: 500;
+	font-size: 35px;
+	line-height: 1;
+}
+.details-component-time {
+	color: #005792;
+	font-family: "Ubuntu", sans-serif;
+	margin-left: 25px;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 1;
+}
+.detail-label {
+	color: #00204a;
+	font-family: "Ubuntu", sans-serif;
+	margin-left: 25px;
+	font-weight: 300;
+	margin-top: 2px;
+	font-size: 20px;
+}
+.main {
+	margin: 20px;
+}
+.quote-container {
+	display: flex;
+	flex-direction: row;
+	flex-shrink: 2;
+	text-align: justify;
+	font-size: 1em;
+	color: #005792;
+	font-weight: 500;
+	font-family: "Ubuntu", sans-serif;
+	padding-bottom: 20px;
+}
+
+.weekly-constructor {
+	padding-top: 1rem;
+	margin-left: 3rem;
+}
+.day-temp {
+	color: #005792;
+	font-family: "Ubuntu", sans-serif;
+	margin-left: 25px;
+	font-weight: 500;
+	margin-top: 15px;
+	font-size: 35px;
+}
+.night-temp {
+	color: #00204a;
+	font-family: "Ubuntu", sans-serif;
+	font-weight: 400;
+	margin-top: 15px;
+	font-size: 25px;
+}
+.day-label {
+	color: #ffeb3b;
+	font-family: "Ubuntu", sans-serif;
+	margin-left: 15px;
+	font-weight: 700;
+	margin-top: 10px;
+	font-size: 35px;
+}
+.link-end {
+	color: #fff;
+	font-family: "Ubuntu", sans-serif;
+	text-decoration: none;
+}
+@media only screen and (min-width: 768px) {
+	.btn-search {
+		color: #fff !important;
+		background-color: #005792 !important;
+		border-color: #005792 !important;
+		font-family: "Ubuntu", sans-serif;
+		border-radius: 0 0.25em 0.25em 0 !important;
+		transition: all 50ms ease-in-out;
+		width: 100%;
+	}
+	.btn-search:hover {
+		color: #005792 !important;
+		background-color: #ffffff !important;
+		border-color: #ffeb3b !important;
+	}
+	.btn-icon {
+		color: #fff !important;
+		background-color: #ffeb3b !important;
+		border-color: #005792;
+		font-family: "Ubuntu", sans-serif;
+		border-radius: 0 !important;
+		transition: all 50ms ease-in-out;
+		width: 100%;
+		align-content: center;
+	}
+	.btn-icon:hover {
+		background-color: #ffffff !important;
+		border-color: #ffeb3b !important;
+	}
+	.form-control {
+		border-radius: 0.25em 0 0 0.25em !important;
+	}
+	.weather-container {
+		border: #005792 3px solid;
+		display: block;
+		margin: 0 auto;
+		background: radial-gradient(
+			905px at 4.9% 85.8%,
+			rgb(191, 223, 244) 0.1%,
+			rgb(172, 192, 247) 57.6%
+		);
+		border-radius: 2rem;
+		box-shadow: -30px 30px #005792;
+	}
+	.container {
+		margin-top: 5%;
+		width: 70% !important;
+	}
+	.temperature-text {
+		font-size: 150px;
+		font-family: "Ubuntu", sans-serif;
+		color: #ffeb3b;
+		font-weight: bold;
+		padding-top: 20px;
+		margin-left: 0;
+		transform: scale(0.6, 1.8);
+	}
+	.big-icon {
+		padding: 30px 30px;
+		align-content: flex-end;
+	}
+	.temperature {
+		color: #005792;
+		margin-left: 10px;
+		font-weight: 500;
+		font-size: 80px;
+		line-height: 1;
+	}
+	.unit {
+		color: #00204a;
+		font-size: 20px;
+		line-height: 36px;
+		font-weight: 400;
+		position: relative;
+		line-height: 1;
+		top: -40px;
+	}
+	.description {
+		color: #005792;
+		font-size: 30px;
+		line-height: 40px;
+		font-weight: 400;
+		position: relative;
+		line-height: 1;
+		left: -60px;
+	}
+	.temperature-container {
+		margin-top: 30px;
+	}
+	.location-label {
+		text-transform: uppercase;
+		color: #ffeb3b;
+		font-family: "Ubuntu", sans-serif;
+		margin-left: 25px;
+		font-weight: 600;
+		font-size: 40px;
+		line-height: 1;
+	}
+	.details-component-time {
+		color: #005792;
+		font-family: "Ubuntu", sans-serif;
+		margin-left: 25px;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 1;
+	}
+	.detail-label {
+		color: #00204a;
+		font-family: "Ubuntu", sans-serif;
+		margin-left: 25px;
+		font-weight: 400;
+		margin-top: 5px;
+		font-size: 20px;
+	}
+
+	.quote-container {
+		display: flex;
+		flex-direction: row;
+		flex-shrink: 2;
+		text-align: justify;
+		font-size: 1em;
+		color: #005792;
+		font-weight: 500;
+		font-family: "Ubuntu", sans-serif;
+		padding-bottom: 20px;
+	}
+
+	.weekly-constructor {
+		padding: 1rem;
+		margin-left: 5rem;
+	}
+	.day-temp {
+		color: #005792;
+		font-family: "Ubuntu", sans-serif;
+		margin-left: 45px;
+		font-weight: 500;
+		margin-top: 10px;
+		font-size: 45px;
+	}
+	.night-temp {
+		color: #00204a;
+		font-family: "Ubuntu", sans-serif;
+		font-weight: 400;
+		margin-top: 20px;
+		font-size: 35px;
+	}
+	.day-label {
+		text-transform: uppercase;
+		color: #ffeb3b;
+		font-family: "Ubuntu", sans-serif;
+		margin-left: 15px;
+		font-weight: 700;
+		margin-top: 10px;
+		font-size: 60px;
+	}
+	.author {
+		color: #fff;
+		font-family: "Ubuntu", sans-serif;
+		font-size: 20px;
+	}
+	.link-end {
+		color: #ffeb3b;
+		font-family: "Ubuntu", sans-serif;
+		text-decoration: none;
+	}
+	.link-end:hover {
+		color: #fff;
+	}
+}
+@media only screen and (min-width: 992px) {
+	.input-format {
+		margin-top: 10px !important;
+	}
+	.btn-search {
+		color: #fff !important;
+		background-color: #005792 !important;
+		border-color: #005792 !important;
+		font-family: "Ubuntu", sans-serif;
+		border-radius: 0 0.25em 0.25em 0 !important;
+		transition: all 50ms ease-in-out;
+		width: 100%;
+	}
+	.btn-search:hover {
+		color: #005792 !important;
+		background-color: #ffffff !important;
+		border-color: #ffeb3b !important;
+	}
+	.btn-icon {
+		color: #fff !important;
+		background-color: #ffeb3b !important;
+		border-color: #005792;
+		font-family: "Ubuntu", sans-serif;
+		border-radius: 0 !important;
+		transition: all 50ms ease-in-out;
+		width: 100%;
+		align-content: center;
+	}
+	.btn-icon:hover {
+		background-color: #ffffff !important;
+		border-color: #ffeb3b !important;
+	}
+	.form-control {
+		border-radius: 0.25em 0 0 0.25em !important;
+	}
+	.weather-container {
+		border: #005792 3px solid;
+		display: block;
+		margin: 0 auto;
+		background: radial-gradient(
+			905px at 4.9% 85.8%,
+			rgb(191, 223, 244) 0.1%,
+			rgb(172, 192, 247) 57.6%
+		);
+		border-radius: 2rem;
+		box-shadow: -30px 40px #005792;
+	}
+	.container {
+		margin-top: 4%;
+		width: 70% !important;
+	}
+	.temperature-text {
+		font-size: 150px;
+		font-family: "Ubuntu", sans-serif;
+		color: #ffeb3b;
+		font-weight: bold;
+		padding-top: 20px;
+		margin-left: 0;
+		transform: scale(0.6, 1.8);
+	}
+	.big-icon {
+		padding: 30px 30px;
+		align-content: flex-end;
+	}
+	.temperature {
+		color: #005792;
+		margin-left: 25px;
+		font-weight: 500;
+		font-size: 100px;
+		line-height: 1;
+	}
+	.unit {
+		font-size: 30px;
+		line-height: 36px;
+		font-weight: 400;
+		position: relative;
+		line-height: 1;
+		top: -60px;
+	}
+	.description {
+		color: #005792;
+		font-size: 30px;
+		line-height: 30px;
+		font-weight: 400;
+		position: relative;
+		line-height: 1;
+		left: -65px;
+	}
+	.temperature-container {
+		margin-top: 30px;
+		margin-left: 25px;
+	}
+	.location-label {
+		color: #ffeb3b;
+		font-family: "Ubuntu", sans-serif;
+		margin-left: 25px;
+		font-weight: 600;
+		font-size: 45px;
+		line-height: 1;
+	}
+	.details-component-time {
+		color: #005792;
+		font-family: "Ubuntu", sans-serif;
+		margin-left: 25px;
+		font-weight: 500;
+		font-size: 30px;
+		line-height: 1;
+	}
+	.detail-label {
+		color: #00204a;
+		font-family: "Ubuntu", sans-serif;
+		margin-left: 25px;
+		font-weight: 400;
+		margin-top: 15px;
+		font-size: 20px;
+	}
+	.main {
+		margin: 40px;
+	}
+	.quote-container {
+		display: flex;
+		flex-direction: row;
+		text-align: justify;
+		font-size: 1.5em;
+		color: #005792;
+		font-weight: 500;
+		font-family: "Ubuntu", sans-serif;
+		max-width: 80% !important;
+		margin: 0 auto;
+
+	}
+	.col-lg-3 {
+		border-left: #ffeb3b 3px solid;
+	}
+	.weekly-constructor {
+		padding: 1.4rem;
+		margin-left: 0;
+	}
+	.day-temp {
+		color: #005792;
+		font-family: "Ubuntu", sans-serif;
+		margin-left: 15px;
+		font-weight: 400;
+		margin-top: 15px;
+		font-size: 25px;
+	}
+	.night-temp {
+		color: #00204a;
+		font-family: "Ubuntu", sans-serif;
+		font-weight: 400;
+		margin-top: 15px;
+		font-size: 15px;
+	}
+	.day-label {
+		color: #ffeb3b;
+		font-family: "Ubuntu", sans-serif;
+		margin-left: 5px;
+		font-weight: 600;
+		margin-top: 10px;
+		font-size: 30px;
+	}
+	.author {
+		color: #fff;
+		font-family: "Ubuntu", sans-serif;
+		font-size: 20px;
+	}
+	.link-end {
+		color: #ffeb3b !important;
+		font-family: "Ubuntu", sans-serif;
+		text-decoration: none;
+	}
+	.link-end:hover {
+		color: #fff;
+	}
+}
