@@ -253,7 +253,7 @@ a {
 		font-weight: 400;
 		position: relative;
 		line-height: 1;
-		left: -60px;
+		left: -50px;
 	}
 	.temperature-container {
 		margin-top: 30px;
@@ -424,7 +424,8 @@ a {
 		font-weight: 400;
 		position: relative;
 		line-height: 1;
-		left: -65px;
+		left: -75px;
+		bottom: 1px;
 	}
 	.temperature-container {
 		margin-top: 30px;
