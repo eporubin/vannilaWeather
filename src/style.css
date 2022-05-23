@@ -112,7 +112,7 @@ a {
 	font-family: "Ubuntu", sans-serif;
 	margin-left: 25px;
 	font-weight: 400;
-	font-size: 30px;
+	font-size: 20px;
 	line-height: 1;
 }
 .detail-label {
@@ -275,7 +275,7 @@ a {
 	.details-component-time {
 		color: #005792;
 		font-family: "Ubuntu", sans-serif;
-		margin-left: 25px;
+		margin-left: 20px;
 		font-weight: 500;
 		font-size: 20px;
 		line-height: 1;
@@ -451,7 +451,7 @@ a {
 		font-family: "Ubuntu", sans-serif;
 		margin-left: 25px;
 		font-weight: 500;
-		font-size: 30px;
+		font-size: 25px;
 		line-height: 1;
 	}
 	.detail-label {
