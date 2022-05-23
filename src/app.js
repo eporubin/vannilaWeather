@@ -47,24 +47,35 @@ function formatDate() {
 	).innerHTML = `${dayN}, ${e.getDate()} ${month} ${hour}:${minutes} ${meridiem}`;
 	setTimeout(formatDate, 1000);
 }
+
+function formatDay(timestamp){
+	let date = new Date(timestamp * 1000);
+	let day = date.getDay();
+	let daysName = ["SUN","MON","TUE", "WED", "THU", "FRI", "SAT"];
+
+	return daysName[day];
+};
+
 function displayForecast(response){
-	console.log(response.data.daily);
+	let forecast = response.data.daily;
+	
 	let forecastElemenent = document.getElementById("weather-forecast");
-	let days = ["TUE", "WED", "THU", "FRI", "SAT", "SUN"];
 	let forecastHTML = "";
-	days.forEach( function (day){
-	forecastHTML = forecastHTML + `
-	<div class="row">
-		<div class="weekly-constructor d-flex justify-content-start">
-			<img src="src/svg/cloud-rain.svg" />
-			<div>
-				<span class="day-temp">23°/</span>
-				<span class="night-temp"> 14° </span>
-				<span class="day-label">${day}</span>
+	forecast.forEach( function (forecastDay, index){
+	if (index > 0 && index < 7){
+		forecastHTML += `
+		<div class="row">
+			<div class="weekly-constructor d-flex justify-content-start">
+				<img src="${iconSelection(forecastDay.weather[0].main)}">
+				<div>
+					<span class="day-temp">${Math.round(forecastDay.temp.max)}°/</span>
+					<span class="night-temp"> ${Math.round(forecastDay.temp.min)}° </span>
+					<span class="day-label">${formatDay(forecastDay.dt)}</span>
+				</div>
 			</div>
-		</div>
-	</div>`;
-	forecastElemenent.innerHTML = forecastHTML;
+		</div>`;
+		forecastElemenent.innerHTML = forecastHTML;
+	}
 	})
 }
 
@@ -109,7 +120,23 @@ function displayTemperature(response) {
 	}
 	getForecast(response.data.coord)
 }
-
+function iconSelection(iconDescription){
+	if (iconDescription === "Clear") {
+		return `src/svg/sun-icon.svg`
+	} else if (iconDescription === "Rain") {
+		return `src/svg/cloud-rain.svg`
+	} else if (iconDescription === "Snow") {
+		return `src/src/svg/snow.svg`
+	} else if (iconDescription === "Thunderstorm"){
+		return `src/svg/cloud-light.svg`
+	} else if (iconDescription === "Mist"){
+		return `src/svg/sun-wind.svg`
+	} else if (iconDescription === "Clouds"){
+		return `src/svg/cloud-sun.svg`
+	} else {
+		return `src/svg/cloudy.svg`
+	}
+}
 function handleFahrenheitLink(event) {
 
 	event.preventDefault();
