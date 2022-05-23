@@ -64,8 +64,8 @@ function displayForecast(response){
 	forecast.forEach( function (forecastDay, index){
 	if (index > 0 && index < 7){
 		forecastHTML += `
-		<div class="row">
-			<div class="weekly-constructor d-flex justify-content-start">
+		<div class="row row-forecast">
+			<div class="weekly-constructor d-flex">
 				<img src="${iconSelection(forecastDay.weather[0].main)}">
 				<div>
 					<span class="day-temp">${Math.round(forecastDay.temp.max)}°/</span>
@@ -100,29 +100,21 @@ function displayTemperature(response) {
 	document.getElementById("humidity").innerHTML = `${humidity} %`;
 	document.getElementById("wind-speed").innerHTML = `${windSpeed} km/h`;
 	weatherDescription.innerHTML = response.data.weather[0].main;
+	console.log(weatherDescription.textContent)
 
 	//Icon selection 
-	
-	if (weatherDescription.textContent === "Clear") {
-		iconWheatherElement.setAttribute("src",`src/svg/sun-icon.svg`)
-	} else if (weatherDescription.textContent === "Rain") {
-		iconWheatherElement.setAttribute("src",`src/svg/cloud-rain.svg`)
-	} else if (weatherDescription.textContent === "Snow") {
-		iconWheatherElement.setAttribute("src",`src/svg/snow.svg`)
-	} else if (weatherDescription.textContent === "Thunderstorm"){
-		iconWheatherElement.setAttribute("src",`src/svg/cloud-light.svg`)
-	} else if (weatherDescription.textContent === "Mist"){
-		iconWheatherElement.setAttribute("src",`src/svg/sun-wind.svg`)
-	} else if (weatherDescription.textContent === "Clouds"){
-		iconWheatherElement.setAttribute("src",`src/svg/cloud-sun.svg`)
-	} else {
-		iconWheatherElement.src = `src/svg/cloudy.svg`;
-	}
+	iconWheatherElement.setAttribute("src",iconSelection(weatherDescription.textContent))
 	getForecast(response.data.coord)
 }
 function iconSelection(iconDescription){
+	let timePeriod = (new Date()).getHours();
+	console.log(timePeriod)
 	if (iconDescription === "Clear") {
-		return `src/svg/sun-icon.svg`
+		if(timePeriod >5 && timePeriod < 20){
+			return `src/svg/sun-icon.svg`
+		} else {
+			return `src/svg/clear-moon.svg`
+		}
 	} else if (iconDescription === "Rain") {
 		return `src/svg/cloud-rain.svg`
 	} else if (iconDescription === "Snow") {
@@ -132,7 +124,11 @@ function iconSelection(iconDescription){
 	} else if (iconDescription === "Mist"){
 		return `src/svg/sun-wind.svg`
 	} else if (iconDescription === "Clouds"){
-		return `src/svg/cloud-sun.svg`
+		if (timePeriod >5 && timePeriod < 20){
+			return `src/svg/cloud-sun.svg`
+		}else {
+			return `src/svg/cloudy-moon.svg`
+		}	
 	} else {
 		return `src/svg/cloudy.svg`
 	}

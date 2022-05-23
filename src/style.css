@@ -2,6 +2,7 @@ a {
 	text-decoration: none !important;
 	color: #00204a !important;
 }
+
 .btn-search {
 	color: #fff !important;
 	background-color: #2a78b0 !important;
@@ -163,6 +164,10 @@ a {
 	font-weight: 700;
 	margin-top: 10px;
 	font-size: 35px;
+}
+.row-forecast {
+	justify-content: center
+	;
 }
 .link-end {
 	color: #fff;
@@ -472,6 +477,8 @@ a {
 	}
 	.col-lg-3 {
 		border-left: #ffeb3b 3px solid;
+		display: block;
+		margin: 0 auto;
 	}
 	.weekly-constructor {
 		padding: 1.4rem;
