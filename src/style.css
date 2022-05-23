@@ -298,12 +298,14 @@ a {
 		color: #005792;
 		font-weight: 500;
 		font-family: "Ubuntu", sans-serif;
-		padding-bottom: 20px;
+		max-width: 85% !important;
+		display: block;
+		margin:0 auto !important;
+		/* margin-top: -60px !important; */
 	}
 
 	.weekly-constructor {
-		padding: 1rem;
-		margin-left: 5rem;
+		align-self: center !important;
 	}
 	.day-temp {
 		color: #005792;
@@ -466,13 +468,16 @@ a {
 	.quote-container {
 		display: flex;
 		flex-direction: row;
-		text-align: justify;
-		font-size: 1.5em;
+		text-align:justify;
+		font-size: 1.2em;
 		color: #005792;
 		font-weight: 500;
 		font-family: "Ubuntu", sans-serif;
-		max-width: 80% !important;
-		margin: 0 auto;
+		max-width: 85% !important;
+		display: block;
+		margin:-45px auto !important;
+		padding-bottom: 10px !important;
+		/* margin-top: -60px !important; */
 
 	}
 	.col-lg-3 {
@@ -483,6 +488,8 @@ a {
 	.weekly-constructor {
 		padding: 1.4rem;
 		margin-left: 0;
+		margin-bottom: -14px;
+		
 	}
 	.day-temp {
 		color: #005792;
