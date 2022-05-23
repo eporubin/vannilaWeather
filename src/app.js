@@ -47,6 +47,25 @@ function formatDate() {
 	).innerHTML = `${dayN}, ${e.getDate()} ${month} ${hour}:${minutes} ${meridiem}`;
 	setTimeout(formatDate, 1000);
 }
+function displayForecast(){
+	let forecastElemenent = document.getElementById("weather-forecast");
+	let days = ["TUE", "WED", "THU", "FRI", "SAT", "SUN"];
+	let forecastHTML = "";
+	days.forEach( function (day){
+	forecastHTML = forecastHTML + `
+	<div class="row">
+		<div class="weekly-constructor d-flex justify-content-start">
+			<img src="src/svg/cloud-rain.svg" />
+			<div>
+				<span class="day-temp">23°/</span>
+				<span class="night-temp"> 14° </span>
+				<span class="day-label">${day}</span>
+			</div>
+		</div>
+	</div>`;
+	forecastElemenent.innerHTML = forecastHTML;
+	})
+}
 
 function displayTemperature(response) {
 	let temperatureElement = document.getElementById("temp");
@@ -171,6 +190,7 @@ document.getElementById("fahrenheit").addEventListener("click", handleFahrenheit
 
 //main
 formatDate();
+displayForecast();
 }
 
 
